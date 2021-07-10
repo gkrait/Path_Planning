@@ -5,21 +5,22 @@ This is my solution for the [the problem](https://stackblitz.com/edit/angular-ft
 
 
 
+
 ## Algorithm 
 Since the priority is to find a fast algorithm that finds a path and not necessary a shortest one, a variant of [Rapidly-exploring random](https://en.wikipedia.org/wiki/Rapidly-exploring_random_tree) tree algorithm is is a good candidate. Recall that the main steps of that algorithm are:
 
 ![](Algo.gif)
 
 ### I. Computing a randomly-generated tree with ***Start*** and ***Goal*** are in its vertices.
-   1. *G_start* (respec. *G_goal*) is a tree with one node ***Start*** (respec. ***Goal***). 
+   1. *<img src="https://render.githubusercontent.com/render/math?math=G_{start}">* (respec. *<img src="https://render.githubusercontent.com/render/math?math=G_{goal}">*) is a tree with one node ***Start*** (respec. ***Goal***). 
 
    2. P := randomly chosen yellow cell in the grid that is neither  ***Start*** nor ***Goal***.
 
-   3. Using the P, for both *G_start* and *G_goal* find two points *P_start* and *P_goal* that are close enough to *G_start* and *G_goal* respectively. 
+   3. Using the P, for both *<img src="https://render.githubusercontent.com/render/math?math=G_{start}">* and *<img src="https://render.githubusercontent.com/render/math?math=G_{goal}">* find two points  *<img src="https://render.githubusercontent.com/render/math?math=G_{start}">*  and *<img src="https://render.githubusercontent.com/render/math?math=P_{goal}">* that are close enough to *<img src="https://render.githubusercontent.com/render/math?math=G_{start}">* and *<img src="https://render.githubusercontent.com/render/math?math=G_{start}">* respectively. 
 
-   4. Check wether there exists an "simple path"[<sup>[1]</sup>](#fn1) between P_start and *G_start*. If so, add that path to  *G_start*, preserving the information about the parents of each node  in both   G_start and  G_goal  (the same for *P_goal* and *G_goal*).[<sup>[2]</sup>](#fn2) 
+   4. Check wether there exists an "simple path"[<sup>[1]</sup>](#fn1) between *<img src="https://render.githubusercontent.com/render/math?math=P_{start}">* and *<img src="https://render.githubusercontent.com/render/math?math=G_{start}">*. If so, add that path to   *<img src="https://render.githubusercontent.com/render/math?math=G_{start}">* , preserving the information about the parents of each node  in both   *<img src="https://render.githubusercontent.com/render/math?math=G_{start}">* and  *<img src="https://render.githubusercontent.com/render/math?math=G_{goal}">*  (the same for *<img src="https://render.githubusercontent.com/render/math?math=P_{goal}">* and *<img src="https://render.githubusercontent.com/render/math?math=G_{goal}">*).[<sup>[2]</sup>](#fn2) 
 
-5. If P= P_start = P_goal  and both simple paths exist, return Tree= G_start $\cup$  G_goal.
+5. If *<img src="https://render.githubusercontent.com/render/math?math=P=P_{start}=P_{goal} ">*  and both simple paths exist, return  *<img src="https://render.githubusercontent.com/render/math?math=Tree=G_{start} \cup G_{goal}">*.
 
 6. Otherwise, compute a new P and go to Step 3
 
@@ -28,8 +29,8 @@ Since the priority is to find a fast algorithm that finds a path and not necessa
 
 ### II. Finding a path between from ***Start*** to ***Goal***
 
-1. Using the parent information, build $Path_1$ a path between the last P and ***Start*** (Do the same for ***Goal*** and call it $Path_2$)
-2. Return the concatination of  Rrversed($Path_1$) and  $Path_2$, after removing the duplication of P.
+1. Using the parent information, build *<img src="https://render.githubusercontent.com/render/math?math=Path_1">* a path between the last P and ***Start*** (Do the same for ***Goal*** and call it *<img src="https://render.githubusercontent.com/render/math?math=Path_1">*)
+2. Return the concatination of  Rrversed(*<img src="https://render.githubusercontent.com/render/math?math=Path_1">*) and  *<img src="https://render.githubusercontent.com/render/math?math=Path_2">*, after removing the duplication of P.
 
 ---
 
@@ -51,7 +52,7 @@ we have the following functions *myPathPlanning*,  *plotting*.
 
 
 
-> **grid**: a $2$-dimensional list of lists of the values $\{1,0\} $ 
+> **grid**: a 2-dimensional list of lists of the values  *<img src="https://render.githubusercontent.com/render/math?math=\{1,0\}">* 
 
 > **start,goal**: two tupes of intefer representing the start and goal
 
