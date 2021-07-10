@@ -8,7 +8,7 @@ This is my solution for the [the problem](https://stackblitz.com/edit/angular-ft
 ## Algorithm 
 Since the priority is to find a fast algorithm that finds a path and not necessary a shortest one, a variant of [Rapidly-exploring random](https://en.wikipedia.org/wiki/Rapidly-exploring_random_tree) tree algorithm is is a good candidate. Recall that the main steps of that algorithm are:
 
-![](https://s6.gifyu.com/images/movie439a511ef7c6f5d6.gif)
+![](Algo.gif)
 
 ### I. Computing a randomly-generated tree with ***Start*** and ***Goal*** are in its vertices.
    1. *G_start* (respec. *G_goal*) is a tree with one node ***Start*** (respec. ***Goal***). 
@@ -120,7 +120,7 @@ plotting(grid,start,goal ,path=path)
 
 
     
-![](Path_Planning__files/Path_Planning__4_0.png)
+![](result.png)
     
 
 
@@ -134,7 +134,7 @@ path=myPathPlanning(grid, start,goal,anim=True,diric="imges/")
 # This command generates a set of images .... delete them everytime you use it.
 ```
 
-![](https://s6.gifyu.com/images/movie439a511ef7c6f5d6.gif)
+![](Algo.gif)
 
 
 
