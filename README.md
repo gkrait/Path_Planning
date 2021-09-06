@@ -1,5 +1,5 @@
 # Path Planning 
-This is my solution for the [the problem](https://stackblitz.com/edit/angular-ft5q31?file=src/app/app.component.ts) you proposed.
+This is my solution for this [the problem](https://stackblitz.com/edit/angular-ft5q31?file=src/app/app.component.ts)  which is typical in the context of path planning problems.
 
 
 
